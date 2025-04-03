@@ -1,7 +1,7 @@
 from STT.stt import listen
 from TTS.tts import speak
 from Open_App.openapp import open_app
-from Web_Open.web_open import open_Web
+# from Web_Open.web_open import open_Web
 from Brain.Brain import Main_Brain
 
 def main():
@@ -17,11 +17,7 @@ def main():
                 print(response)
                 speak(response)
             elif "open" in text:
-                if "website" in text:
-                    speak("Opening website...")
-                    text = text.replace("open", "").replace("website", "").strip()
-                    open_Web(text)
-                elif "app" in text:
+                if "app" in text:
                     print("Opening app...")
                     text = text.replace("open", "").replace("app", "").strip()
                     open_app(text)
